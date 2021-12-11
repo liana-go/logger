@@ -16,10 +16,10 @@ func CreateFileLogTarget(FilePath string, levels []string, categories []string) 
 	var target Target
 
 	target = &FileLogTarget{
-		BaseLogTarget{
+		BaseLogTarget: BaseLogTarget{
 			Levels: levels, Categories: categories,
 		},
-		FilePath,
+		FilePath: FilePath,
 	}
 
 	return &target
